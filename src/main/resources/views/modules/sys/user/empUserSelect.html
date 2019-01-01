@@ -38,9 +38,9 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label">${text('机构')}：</label>
+					<label class="control-label">${text('用户分类')}：</label>
 					<div class="control-inline width-90">
-						<#form:treeselect id="office" title="${text('机构选择')}"
+						<#form:treeselect id="office" title="${text('用户分类选择')}"
 								path="employee.office.officeCode" labelPath="employee.office.officeName" 
 								url="${ctx}/sys/office/treeData" btnClass="btn-sm" allowClear="true" canSelectParent="true"/>
 					</div>
@@ -84,9 +84,9 @@ selectNum = 0, dataGrid = $('#dataGrid').dataGrid({
 	columnModel: [
 		{header:'${text('登录账号')}', name:'loginCode', index:'a.login_code', width:200, align:"center"},
 		{header:'${text('用户昵称')}', name:'userName', index:'a.user_name', width:200, align:"center"},
-		{header:'${text('员工姓名')}', name:'refName', index:'a.ref_name', width:200, align:"center"},
-		{header:'${text('归属机构')}', name:'employee.office.officeName', index:'o.office_name', width:200, align:"center"},
-		{header:'${text('归属公司')}', name:'employee.company.companyName', index:'c.company_name', width:200, align:"center"},
+		{header:'${text('用户姓名')}', name:'refName', index:'a.ref_name', width:200, align:"center"},
+		{header:'${text('用户分类')}', name:'employee.office.officeName', index:'o.office_name', width:200, align:"center"},
+		{header:'${text('学校')}', name:'employee.company.companyName', index:'c.company_name', width:200, align:"center"},
 		{header:'${text('电子邮箱')}', name:'email', index:'a.email', width:200, align:"center"},
 		{header:'${text('手机号码')}', name:'mobile', index:'a.mobile', width:200, align:"center"},
 		{header:'${text('办公电话')}', name:'phone', index:'a.phone', width:200, align:"center"},

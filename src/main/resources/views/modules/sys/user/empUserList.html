@@ -63,9 +63,9 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label">${text('机构')}：</label>
+					<label class="control-label">${text('用户分类')}：</label>
 					<div class="control-inline width-90">
-						<#form:treeselect id="office" title="${text('机构选择')}"
+						<#form:treeselect id="office" title="${text('用户分类选择')}"
 								path="employee.office.officeCode" labelPath="employee.office.officeName" 
 								url="${ctx}/sys/office/treeData?ctrlPermi=2" btnClass="btn-sm" allowClear="true" canSelectParent="true"/>
 					</div>
@@ -79,7 +79,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label">${text('岗位')}：</label>
+					<label class="control-label">${text('账号分类')}：</label>
 					<div class="control-inline width-90">
 						<#form:select name="employee.postCode" items="${postList}"
 							itemLabel="postName" itemValue="postCode" blankOption="true" class="form-control"/>
@@ -111,9 +111,9 @@ $('#dataGrid').dataGrid({
 			return '<a href="${ctx}/sys/empUser/form?userCode='+row.userCode+'&op=edit" class="btnList" data-title="${text('编辑用户')}">'+(val||row.id)+'</a>';
 		}},
 		{header:'${text('用户昵称')}', name:'userName', index:'a.user_name', width:200, align:"center"},
-		{header:'${text('员工姓名')}', name:'refName', index:'a.ref_name', width:200, align:"center"},
-		{header:'${text('归属机构')}', name:'employee.office.officeName', index:'o.office_name', width:200, align:"center"},
-		{header:'${text('归属公司')}', name:'employee.company.companyName', index:'c.company_name', width:200, align:"center"},
+		{header:'${text('用户姓名')}', name:'refName', index:'a.ref_name', width:200, align:"center"},
+		{header:'${text('用户分类')}', name:'employee.office.officeName', index:'o.office_name', width:200, align:"center"},
+		{header:'${text('学校')}', name:'employee.company.companyName', index:'c.company_name', width:200, align:"center"},
 		{header:'${text('电子邮箱')}', name:'email', index:'a.email', width:200, align:"center"},
 		{header:'${text('手机号码')}', name:'mobile', index:'a.mobile', width:200, align:"center"},
 		{header:'${text('办公电话')}', name:'phone', index:'a.phone', width:200, align:"center"},

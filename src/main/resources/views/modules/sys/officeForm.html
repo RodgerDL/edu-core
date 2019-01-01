@@ -1,9 +1,9 @@
-<% layout('/layouts/default.html', {title: '机构管理', libs: ['validate']}){ %>
+<% layout('/layouts/default.html', {title: '用户分类管理', libs: ['validate']}){ %>
 <div class="main-content">
 	<div class="box box-main">
 		<div class="box-header">
 			<div class="box-title">
-				<i class="fa icon-grid"></i> ${text(office.isNewRecord ? '新增机构' : '编辑机构')}
+				<i class="fa icon-grid"></i> ${text(office.isNewRecord ? '新增用户分类' : '编辑用户分类')}
 			</div>
 			<div class="box-tools pull-right">
 				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -15,9 +15,9 @@
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="form-group">
-							<label class="control-label col-sm-4">${text('上级机构')}：</label>
+							<label class="control-label col-sm-4">${text('上级分类')}：</label>
 							<div class="col-sm-8">
-								<#form:treeselect id="parent" title="${text('上级机构')}"
+								<#form:treeselect id="parent" title="${text('上级分类')}"
 									path="parent.id" labelPath="parent.officeName" 
 									url="${ctx}/sys/office/treeData?excludeCode=${office.id}&ctrlPermi=2"
 									class="" allowClear="true" canSelectRoot="true" canSelectParent="true"/>
@@ -29,7 +29,7 @@
 					<div class="col-xs-6">
 						<div class="form-group">
 							<label class="control-label col-sm-4" title="">
-								<span class="required ">*</span> ${text('机构名称')}：<i class="fa icon-question hide"></i></label>
+								<span class="required ">*</span> ${text('用户分类')}：<i class="fa icon-question hide"></i></label>
 							<div class="col-sm-8">
 								<#form:input path="officeName" maxlength="100" class="form-control required "/>
 							</div>
@@ -38,7 +38,7 @@
 					<div class="col-xs-6">
 						<div class="form-group">
 							<label class="control-label col-sm-4" title="">
-								<span class="required ">*</span> ${text('机构代码')}：<i class="fa icon-question hide"></i></label>
+								<span class="required ">*</span> ${text('分类代码')}：<i class="fa icon-question hide"></i></label>
 							<div class="col-sm-8">
 								<#form:hidden path="isNewRecord"/>
 								<#form:hidden path="officeCode"/>
@@ -51,7 +51,7 @@
 					<div class="col-xs-6">
 						<div class="form-group">
 							<label class="control-label col-sm-4" title="">
-								<span class="required ">*</span> ${text('机构全称')}：<i class="fa icon-question hide"></i></label>
+								<span class="required ">*</span> ${text('分类名称')}：<i class="fa icon-question hide"></i></label>
 							<div class="col-sm-8">
 								<#form:input path="fullName" maxlength="200" class="form-control required "/>
 							</div>
@@ -71,7 +71,7 @@
 					<div class="col-xs-6">
 						<div class="form-group">
 							<label class="control-label col-sm-4" title="">
-								<span class="required ">*</span> ${text('机构类型')}：<i class="fa icon-question hide"></i></label>
+								<span class="required ">*</span> ${text('分类所属')}：<i class="fa icon-question hide"></i></label>
 							<div class="col-sm-8">
 								<#form:select path="officeType" dictType="sys_office_type" class="form-control required " />
 							</div>
