@@ -5,8 +5,10 @@
 <link rel="stylesheet" href="${ctxStatic}/modules/sys/sysLogin.css?${_version}">
 <div class="login-box">
 	<div class="login-logo">
-		<a href="${ctx}/login"><b>${@Global.getConfig('productName')}</b>
-			<small>${@Global.getConfig('productVersion')}</small></a>
+		<!--<a href="${ctx}/login"><b>${@Global.getConfig('productName')}</b>-->
+			<!--<small>${@Global.getConfig('productVersion')}</small></a>-->
+        <img src="http://www.e-all.cn/wp-content/uploads/2017/03/易学堂logo-矢量-03.png" style="width: 360px;"><br>
+        <a href="${ctx}/login"><b>${@Global.getConfig('productName')}</b></a>
 	</div>
 	<div class="login-box-body">
 		<#form:form id="loginForm" model="${user!}" action="${ctx}/login" method="post">
@@ -76,8 +78,7 @@
 		</div>
 	</div>
 	<div class="login-copyright">
-		&copy; ${@DateUtils.getYear()} ${@Global.getConfig('productName')} - Powered By <a
-			href="http://jeesite.com">JeeSite ${@Global.getProperty('jeesiteVersion')}</a>
+		&copy; ${@DateUtils.getYear()} ${@Global.getConfig('productName')} - Powered By E-all
 	</div>
 </div>
 <% } %>
